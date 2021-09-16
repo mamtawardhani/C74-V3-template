@@ -29,39 +29,11 @@ export default class RideHistoryScreen extends Component {
       .limit(10)
       .get()
       .then(snapshot => {
-        snapshot.docs.map(doc => {
-         /* 
-         this.setState(
-            allTransactions: [...this.state.allTransactions, 
-                              doc.data()],
-            lastVisibleTransaction: doc
-          );
-          */
-
-           /* 
-           this.setState{
-            allTransactions: [...this.state.allTransactions, 
-                              doc.data()],
-            lastVisibleTransaction: doc
-          };
-          */
-
-           /* 
+        snapshot.docs.map(doc => { 
            this.setState({
-            allTransactions: [...this.state.allTransactions,
-                               doc.data()],
+            allTransactions: [...this.state.allTransactions, doc.data()],
             lastVisibleTransaction: doc
           });
-          */
-
-           /* 
-           this.setState({
-            allTransactions= [...this.state.allTransactions,
-                               doc.data()],
-            lastVisibleTransaction= doc
-          });
-          */
-
         });
       });
   };
